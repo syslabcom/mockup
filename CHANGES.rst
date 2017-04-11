@@ -6,6 +6,34 @@ Changelog
 
 Bug fixes:
 
+- Fixed path to tooltip less files.
+  This gave an ugly site in develoment mode when editing the loggedin bundle css.
+  Fixes `issue 1843 <https://github.com/plone/Products.CMFPlone/issues/1843>`_.
+  [maurits]
+
+- Style filemanager toolbar to better fix small screens.
+  [thet]
+
+- Fix pattern options initialization according to change in plone.app.theming.
+  See: https://github.com/plone/plone.app.theming/pull/124
+  [thet]
+
+- Fix setting empty ace editor instance by passing an empty text.
+  [thet]
+
+- Unify disabling of buttons by using setting the ``disabled`` DOM property instead using classes.
+  Fixes thememapper button staying disabled all the time.
+  [thet]
+
+- Autoformat + eslint fixes for thememapper and filemanager patterns.
+  [thet]
+
+- Update ``ace-builds`` to 1.2.6, which fixes IME handling in new Chrome.
+  [thet]
+
+- Fix i18n in upload pattern.
+  [cedricmessiant]
+
 - Do not use relative paths for imports in less files.
   Use the less variables for paths instead.
   Fixes a case, where less files couldn't be found in Plone development mode.
